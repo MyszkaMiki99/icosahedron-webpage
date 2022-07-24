@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>dwudziestośćian - obliczenia</title>
+	<script type="text/javascript"  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<style>
+body {
+ text-align:center;
+ background-image: url("dwustoscian.gif");
+ font-family: "Courier New", Courier, monospace; 
+ font-size:24px;
+ color:#000080;
+}
+.button {
+  display: inline-block;
+  padding: 8px 12px;
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #118552;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px #666;
+  transform: translateY(1px);
+}
+</style>
+</head>
+<body>
+<p>
+<h3>Icosahedron</h3>
+<p>Total surface area formula: \[ P_c = 5\cdot{a^2}\cdot\sqrt{3} \]</p>
+<p>Volume formula: \[ V = \frac{5}{12}\cdot{a^3}\cdot{(3 + \sqrt{5})} \]</p>
+<div>
+<form action="#" name="dwudziestoscian">
+    <label>
+        a = <input id="a" name="a" type="text" value="">
+        
+    </label>
+	<br> <br>
+    <!-- <br><input type="image" src="dwudziestoscian.png" alt="dwuscian"  width="60" height="60" value="" onClick="obliczenia()"> <!--  nie wiem czemu, ale obliczenia nie zostają po uzyciu tego,mrygają razi  znikają-->
+	 <input type="button" value="CALCULATE" class="button" onClick="obliczenia()"> 
+	 
+</form>
+</div>
+<p><b>V = </b><span id="V">?</span></p>
+<p><b>Pc = </b><span id="Pc">?</span></p>
+
+<script>
+    function obliczenia(){
+        const a = parseInt(document.dwudziestoscian.a.value); //zwraca integer z naszego text value 
+        
+		let V = (5/12)*Math.pow(a,3)*(3+Math.sqrt(5));
+		let Pc = 5*Math.pow(a,2)*Math.sqrt(3);
+        document.getElementById("V").innerHTML=V;
+        document.getElementById("Pc").innerHTML=Pc;
+    }
+</script>
+</body>
+</html>
