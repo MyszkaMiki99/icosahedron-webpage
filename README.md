@@ -1,1 +1,3 @@
-# analysis-webpage
+# icosahedron-webpage
+*Icosahedron-webpage is simply page that was made to showcase some basic html and css skills. This page calculates the total surface and volume of the icosahedron with given length of an edge. Code also remembers, or at least should, your previous number entries. Keep in mind code was made to handle only integer numbers. Although some technical skills could be improved here and there I am still very proud of the aesthetics and I encourage you to open the page on your browser not only look at the code.
+In order to properly open up the page please download all the files (expect readme naturally) and follow the guides found on the internet.*
